@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500&display=swap');
+*,::before,::after{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+.content{
+    display: block;
+    color: #124e92;
+    position: absolute;
+    top: 6%;  
+    z-index: 2;
+}
+.content-h1{
+    text-align: center;
+    display: block;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 10px 0 30px;
+}
+.content1{
+    display: none;
+}
+h1{
+    display: none;
+}
+.media{
+    display: inline-block;
+    justify-content: center;
+    font-weight: bolder;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/mathematics.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+#container{
+    display: grid;
+    place-items: center;
+    width: 34.5%;
+    height: 402.5px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.inputContainer{
+   position: relative;
+   display: grid;
+   place-items: center;
+   justify-content: center;
+   width: 80%;
+   margin-bottom: 10px;
+   margin-top: -40px;
+
+}
+
+.inputContainer > input{
+    /* width: 100%; */
+    margin-bottom: 10px!important;
+    outline: none !important;
+    cursor: pointer !important ;
+    transform: scale(0.85) !important;
+    padding: 5px !important;
+    border-radius: 10px;
+    border:2px solid black;
+    
+}
+.inputContainer > ::placeholder{
+    font-weight: bolder!important;
+    text-align: center!important;
+    font-size: larger!important;
+}
+
+#info{
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    position: absolute;
+    left: 55%;
+    top: 70%;
+    transform: translate(-50%,-50%) translateX(-10px);
+    gap: 10px;
+    width: 100%;
+
+}
+#info > span{
+    color: black;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    text-align: center;
+}
+/* button */
+#button{
+    position: absolute;
+    margin-top: 7rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 60%;
+    height: 25px;
+    border-radius: 10px;
+    background: #124e92;
+    color: white;
+}
+#button:hover{
+    background: #187aeb;
+    transition: 0.2s;
+}
+/* ANIMATION */
+.bubbles img{
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+.bubbles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -60px;
+}
+
+.yo{
+    object-fit:cover;
+    border-radius: 50%;
+}
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+
+}
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+    width: 40px;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.4s;
+    width: 20px;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 3s;
+    width: 29px;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 7s;
+    width: 34px;
+}
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+       
+        opacity: 1;
+    }
+    70%{
+        
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+/* MEDIA QUERIES */
+@media(min-width: 1030px){
+   
+    .content1{
+        display: block;
+        color: #fbfcfd;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+    h1{
+        text-align: center;
+        display: block;
+        font-size: 40px;
+        line-height: 40px;
+        margin: 10px 0 30px;
+    }
+}
+
+@media(max-width: 521px) {
+    .media{
+        display: none;
+    }
+    .inputContainer > input{
+        width: 100%;
+    }
+    .content-h1{
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        line-height: 20px;
+        margin: 10px 0 30px;
+    }
+}
+@media(max-width: 661px){
+    .me{
+        display: none;
+    }
+
+}
